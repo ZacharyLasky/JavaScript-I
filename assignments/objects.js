@@ -87,14 +87,43 @@ intern5.multiplyNums = function(num1, num2) {
 
 const parent = {}
 
+parent.name = "Susan";
+parent.age = 70;
+
+parent.child = {};
+parent.child.name = "George";
+parent.child.age = 50;
+
+parent.grandChild = {};
+parent.grandChild.name = "Sam";
+parent.grandChild.age = 30;
+
+parent.speak = function() {
+  return `My name is ${this.name}`;
+}
+parent.child.speak = function() {
+  return `My name is ${this.name}`;
+}
+parent.grandChild.speak = function() {
+  return `My name is ${this.name}`;
+}
+
+
+
 // Log the parent object's name
+console.log(parent.name);
 
 // Log the child's age
+console.log(parent.child.name);
 
 // Log the name and age of the grandchild
+console.log(parent.grandChild.name + ' ' + parent.grandChild.age);
 
 // Have the parent speak
+parent.speak();
 
 // Have the child speak
+parent.child.speak();
 
 // Have the grandchild speak
+parent.grandChild.speak();
